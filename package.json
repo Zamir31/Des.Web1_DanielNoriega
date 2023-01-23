@@ -1,0 +1,19 @@
+{
+  "name": "des.web1_danielnoriega",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Zamir31/Des.Web1_DanielNoriega.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Zamir31/Des.Web1_DanielNoriega/issues"
+  },
+  "homepage": "https://github.com/Zamir31/Des.Web1_DanielNoriega#readme"
+}
