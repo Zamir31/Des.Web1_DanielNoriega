@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/Zamir31/Des.Web1_DanielNoriega/issues"
   },
-  "homepage": "https://github.com/Zamir31/Des.Web1_DanielNoriega#readme"
+  "homepage": "https://github.com/Zamir31/Des.Web1_DanielNoriega#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
 }
