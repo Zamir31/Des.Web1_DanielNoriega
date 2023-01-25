@@ -1,4 +1,4 @@
-var mysqli = require("mysql");
+var mysql = require("mysql");
 var http = require("http");
 
 http.createServer(function (req, res) {
