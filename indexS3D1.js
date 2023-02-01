@@ -78,13 +78,12 @@ app.post('/api/telefonos/', (req, res)=>{
         database: "registrotel"
     });
 
-    let sql = "insert into tbl_persona " +
-            " (nombre_persona, apellido_persona, fecha_nacimiento) " +
-            " values (?, ?, ?)";
+    let sql = "insert into tbl_telefonos " +
+            " (numero, id_persona) " +
+            " values (?, ?)";
     
-    let parametros = [  req.body.nombre_persona, 
-                        req.body.apellido_persona, 
-                        req.body.fecha_nacimiento
+    let parametros = [  req.body.numero, 
+                        req.body.id_persona
                     ];
 
     con.connect(function(err){
@@ -113,14 +112,12 @@ app.put('/api/telefonos/:id', (req, res)=>{
         database: "registrotel"
     });
 
-    let sql = " update tbl_persona set nombre_persona = ?, " +
-                " apellido_persona = ?,  "+
-                " fecha_nacimiento = ? "+
-                " where id_persona = ? ";
+    let sql = " update tbl_telefonos set numero = ?, " +
+                " id_persona = ? "+
+                " where id_telefono = ? ";
 
-    let parametros = [  req.body.nombre_persona, 
-                        req.body.apellido_persona, 
-                        req.body.fecha_nacimiento, 
+    let parametros = [  req.body.numero, 
+                        req.body.id_persona, 
                         req.params.id];
 
     con.connect(function(err){
@@ -140,7 +137,7 @@ app.put('/api/telefonos/:id', (req, res)=>{
 
 });
 
-app.delete('/api/persona/:id', (req, res)=>{
+app.delete('/api/telefonos/:id', (req, res)=>{
 
     let con = mysql.createConnection({
         host: "localhost",
@@ -149,7 +146,7 @@ app.delete('/api/persona/:id', (req, res)=>{
         database: "registrotel"
     });
 
-    let sql = "delete from tbl_persona where id_persona = ?";
+    let sql = "delete from tbl_telefonos where id_telefono = ?";
 
     let parametros = [req.params.id];
 
